@@ -1,4 +1,6 @@
-# Surfs Up: Climate Analysis in Honolulu
+# Surfs Up!: Climate Analysis in Honolulu
+
+![surfs-up](Images/surfs-up.png)
 
 ## Instructions 
 ### Step 1 - Climate Analysis and Exploration
@@ -84,7 +86,8 @@ Now that you have completed your initial analysis, design a Flask API based on t
 * Plot the min, avg, and max temperature from your previous query as a bar chart.
   * Use "Trip Avg Temp" as the title.
   * Use the average temperature as the bar height (y value).
-  * Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
+  * Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).<br>
+
 ![temperature](Images/temperature.png)
 
 ### Daily Rainfall Average
@@ -99,6 +102,7 @@ Now that you have completed your initial analysis, design a Flask API based on t
   * Strip off the year and save a list of strings in the format `%m-%d`.
   * Use the `daily_normals` function to calculate the normals for each date string and append the results to a list called `normals`.
 * Load the list of daily normals into a Pandas DataFrame and set the index equal to the date.
-* Use Pandas to plot an area plot (`stacked=False`) for the daily normals.
+* Use Pandas to plot an area plot (`stacked=False`) for the daily normals.<br>
+ 
 ![daily-normals](Images/daily-normals.png)
 * Close out your session.
