@@ -1,4 +1,4 @@
-# Surfs Up!: Climate Analysis in Honolulu
+# Climate Analysis in Honolulu
 
 ![surfs-up](Images/surfs-up.png)
 
