@@ -3,7 +3,7 @@
 ![surfs-up](Images/surfs-up.png)
 
 ## Instructions 
-### Step 1 - Climate Analysis and Exploration
+## Step 1 - Climate Analysis and Exploration
 Use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 * Use SQLAlchemy `create_engine` to connect to your sqlite database.
 * Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
@@ -41,9 +41,7 @@ Use Python and SQLAlchemy to do basic climate analysis and data exploration of y
 
 ## Step 2 - Climate App
 
-Now that you have completed your initial analysis, design a Flask API based on the queries that you have just developed.
-
-* Use Flask to create your routes.
+Design a Flask API based on the queries that you have completed the initial analysis. Use Flask to create your routes.
 
 ### Routes
 
@@ -67,22 +65,21 @@ Now that you have completed your initial analysis, design a Flask API based on t
   * When given the start only, calculate `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date.
   * When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
 
-## Bonus: Other Recommended Analyses
-* Use the provided [temp_analysis_bonus_1_starter.ipynb](temp_analysis_bonus_1_starter.ipynb) and [temp_analysis_bonus_1_starter](temp_analysis_bonus_2_starter.ipynb) starter notebooks for each bonus challenge.
+- - -
 
-### Temperature Analysis I
-* Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December?
-* Use pandas to perform this portion.
+## Other Recommended Analysis
+
+## Temperature Analysis I
+* Use pandas to perform analysis whether there is a meaningful difference between the temperature in June and December in Hawaii.
   * Convert the date column format from string to datetime.
   * Set the date column as the DataFrame index
   * Drop the date column
-* Identify the average temperature in June at all stations across all available years in the dataset. Do the same for December temperature.
-* Use the t-test to determine whether the difference in the means, if any, is statistically significant. Will you use a paired t-test, or an unpaired t-test? Why?
+* Identify the average temperature in June and December at all stations across all available years in the dataset.
+* Use the t-test (paired or unpaired) to determine whether the difference in the means, if any, is statistically significant. 
 
-### Temperature Analysis II
-* You are looking to take a trip from August first to August seventh of this year, but are worried that the weather will be less than ideal. Using historical data in the dataset find out what the temperature has previously looked like.
-* The starter notebook contains a function called `calc_temps` that will accept a start date and end date in the format `%Y-%m-%d`. The function will return the minimum, average, and maximum temperatures for that range of dates.
-* Use the `calc_temps` function to calculate the min, avg, and max temperatures for your trip using the matching dates from a previous year (i.e., use "2017-08-01").
+## Temperature Analysis II
+* Find the temperature of Aug 1st to Aug 7th in Hawaii using historical data in the dataset.
+* Use `calc_temps` function that will accept `%Y-%m-%d` format, and return the minimum, average, and maximum temperatures for that range of dates.
 * Plot the min, avg, and max temperature from your previous query as a bar chart.
   * Use "Trip Avg Temp" as the title.
   * Use the average temperature as the bar height (y value).
@@ -91,12 +88,11 @@ Now that you have completed your initial analysis, design a Flask API based on t
 ![temperature](Images/temperature.png)
 
 ### Daily Rainfall Average
-* Now that you have an idea of the temperature lets check to see what the rainfall has been, you don't want a when it rains the whole time!
 * Calculate the rainfall per weather station using the previous year's matching dates.
   * Sort this in descending order by precipitation amount and list the station, name, latitude, longitude, and elevation.
 
 ### Daily Temperature Normals
-* Calculate the daily normals for the duration of your trip. Normals are the averages for the min, avg, and max temperatures. You are provided with a function called `daily_normals` that will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. Be sure to use all historic TOBS that match that date string.
+* Calculate the daily normals which is the averages for the min, avg, and max temperatures. 
   * Set the start and end date of the trip.
   * Use the date to create a range of dates.
   * Strip off the year and save a list of strings in the format `%m-%d`.
@@ -105,4 +101,5 @@ Now that you have completed your initial analysis, design a Flask API based on t
 * Use Pandas to plot an area plot (`stacked=False`) for the daily normals.<br>
  
 ![daily-normals](Images/daily-normals.png)
+
 * Close out your session.
